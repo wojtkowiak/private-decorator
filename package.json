@@ -1,0 +1,54 @@
+{
+    "name": "private-decorator",
+    "version": "0.1.4",
+    "description": "Private and protected members in JavaScript!",
+    "main": "dist/main.js",
+    "jsnext:main": "src/main.js",
+    "scripts": {
+        "build": "gulp transpile",
+        "prepublish": "npm run build",
+        "test": "gulp test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wojtkowiak/private-decorator"
+    },
+    "keywords": [
+        "es6",
+        "es7",
+        "es2015",
+        "es2016",
+        "private",
+        "protected",
+        "babel",
+        "decorators",
+        "annotations",
+        "javascript"
+    ],
+    "author": "Bartosz Wojtkowiak <bartosz@wojtkowiak.it>",
+    "license": "MIT",
+    "homepage": "https://wojtkowiak.it",
+    "bugs": {
+        "url": "https://github.com/wojtkowiak/private-decorator/issues"
+    },
+    "devDependencies": {
+        "babel-eslint": "^6.0.4",
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "babel-preset-es2015-without-strict": "^0.0.2",
+        "babel-preset-stage-1": "^6.5.0",
+        "babel-core": "^6.7.6",
+        "chai": "^3.2.0",
+        "eslint": "^2.10.2",
+        "eslint-config-airbnb-base": "^3.0.1",
+        "eslint-plugin-import": "^1.8.0",
+        "gulp": "^3.9.0",
+        "gulp-babel": "^6.1.2",
+        "gulp-concat": "^2.6.0",
+        "gulp-load-plugins": "^1.1.0",
+        "gulp-mocha": "^2.2.0",
+        "gulp-sourcemaps": "^1.5.0",
+        "gulp-util": "^3.0.7",
+        "merge-stream": "^1.0.0",
+        "dirty-chai": "^1.2.2"
+    }
+}
