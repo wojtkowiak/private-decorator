@@ -1,6 +1,6 @@
 {
     "name": "private-decorator",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Private and protected members in JavaScript!",
     "main": "dist/main.js",
     "jsnext:main": "src/main.js",
