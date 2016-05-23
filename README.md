@@ -1,8 +1,11 @@
 ## `@privateMember` and `@protectedMember` decorators!
 
-Have you ever dreamt about true privates in JS? 
-I did not :wink: But when a friend was laughing at JS saying that the new ES6 class inheritance is useless without private/protected and seems that there is still no easy way to achieve that - I just said "challenge accepted" :wink:
-But seriously, it started with a proof of concept and ended with a full private/protected class enhancement solution via decorators. 
+Have you ever dreamt about true privates in JS? I did not :wink:
+
+But when a friend was laughing at JS saying that the new ES6 class inheritance is useless without private/protected and seems that there is still no easy way to achieve that - I just said "challenge accepted" :bowtie:
+
+But seriously, it started with a proof of concept and ended with a full private/protected class enhancement solution via decorators.
+
 What is notable is that this package has _zero_ dependencies. Also making this was a lot of low level JS fun :wink: 
  
 ### How to use it?
@@ -27,9 +30,11 @@ In your `.babelrc` you need to have 3 things:
 ### Why?
 
 Before you will actually use it, think thoroughly if you really need this. Standard techniques for making things private in JS exists and now with `Symbols` it is pretty easy.
-The main reason this package was created was to eliminate 'unsupported' usage of libraries. Many times instead of reporting an issue or PR, developers were making workarounds and often use some internals of the library directly.
+
+Besides the normal benefits of private/protected types in class inheritance the main reason this package was created was to eliminate 'unsupported' usage of libraries. Many times instead of reporting an issue or PR, developers were making workarounds and often use some internals of the library directly.
+
 It is not a good way to go, as later when the library is updated, often it breaks the workarounds. Of course we usually do not care unless we are supporting those developers and helping them makes our time going to waste.
-Of course I will not describe here all the normal benefits of private/protected types in class inheritance as this is well-known.
+
 If you are convinced to try this, be aware that using this solution comes with a significant cost (see below).
 
 ### The cost
@@ -90,8 +95,9 @@ class Test {
 }
 ```
 
-since any function declared (arrow or normal does not matter) inside a method scope is not bound to the class. A call to something private from it is always detected as invalid since the parent scope to that function is global.
-You can get this work using `bind` but for the ease of use I have created a `ScopedCallbacks` abstract class which gives you a `_` helper method.
+since any function declared (arrow or normal does not matter) inside a method scope is not bound to the class. A call to something private from it is always detected as invalid since function does not belong to the class.
+You can not get this work simply using `bind` as this intentionally will not work.
+To make such things possible I have created a `ScopedCallbacks` abstract class which gives you a `_` helper method.
 
 ```javascript
 import { privateMember, protectedMember, ScopedCallbacks } from 'private-decorator'; 
