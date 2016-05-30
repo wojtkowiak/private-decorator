@@ -27,6 +27,8 @@ In your `.babelrc` you need to have 3 things:
 2. `stage-1` preset.
 3. `transform-decorators-legacy` plugin enabled.
 
+__In Node 4/5/6 if you will use `babel-preset-es2015-node(4/5/6)` this package will not work. Classes are supported natively since `node 4` and they are in `strict` mode by default.__
+
 ### Why?
 
 Before you will actually use it, think thoroughly if you really need this. Standard techniques for making things private in JS exists and now with `Symbols` it is pretty easy.
