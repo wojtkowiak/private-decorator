@@ -6,7 +6,11 @@ But when a friend was laughing at JS saying that the new ES6 class inheritance i
 
 But seriously, it started with a proof of concept and ended with a full private/protected class enhancement solution via decorators.
 
-What is notable is that this package has _zero_ dependencies. Also making this was a lot of low level JS fun :wink: 
+What is notable is that this package has _zero_ dependencies. Also making this was a lot of low level JS fun :wink:
+ 
+### Why not `@private`/`@protected`? 
+
+Believe me or not - `private` and `protected` are keywords (reserved words) in JavaScript so I decided not to conflict with them even though those keywords mean nothing now.  
  
 ### How to use it?
 
